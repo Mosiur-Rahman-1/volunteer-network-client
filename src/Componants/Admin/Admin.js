@@ -4,7 +4,7 @@ const Admin = () => {
 
     const [usersRegistered , setUsersRegistered] = useState([]);
     useEffect ( () => {
-        fetch('http://localhost:4000/users')
+        fetch('https://secure-tor-12510.herokuapp.com/users')
         .then (res => res.json())
         .then(user => setUsersRegistered(user));
     }, [])

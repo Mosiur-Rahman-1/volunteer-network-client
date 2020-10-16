@@ -7,7 +7,7 @@ const Event = () => {
     const [signedInUser, setSignedInUser] = useContext(UserContext);
 
     useEffect ( () => {
-        fetch('http://localhost:4000/events?email='+ signedInUser.email)
+        fetch('https://secure-tor-12510.herokuapp.com/events?email='+ signedInUser.email)
         .then (res => res.json())
         .then(events => setEventsRegistered(events));
     }, [])

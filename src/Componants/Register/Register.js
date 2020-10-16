@@ -27,7 +27,7 @@ const Register = () => {
 
         const registeredEvent = {...signedInUser, ...dateAdded, ...work};
         console.log(registeredEvent);
-        fetch('http://localhost:4000/addRegisteredEvent', {
+        fetch('https://secure-tor-12510.herokuapp.com/addRegisteredEvent', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(registeredEvent)
